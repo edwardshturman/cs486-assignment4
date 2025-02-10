@@ -9,3 +9,10 @@ services:
     build: ./backend/
     ports:
       - "8800:8800"
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+    ports:
+      - "3306:3306"
